@@ -33,6 +33,7 @@
             textBoxVariableA = new TextBox();
             txtBoxVariableB = new TextBox();
             btnCalcular = new Button();
+            btnReset = new Button();
             SuspendLayout();
             // 
             // txtVariableA
@@ -78,11 +79,22 @@
             btnCalcular.UseVisualStyleBackColor = true;
             btnCalcular.Click += btnCalcular_Click;
             // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(275, 214);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(94, 29);
+            btnReset.TabIndex = 5;
+            btnReset.Text = "Reset";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
+            // 
             // frmCalculadora
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(500, 291);
+            Controls.Add(btnReset);
             Controls.Add(btnCalcular);
             Controls.Add(txtBoxVariableB);
             Controls.Add(textBoxVariableA);
@@ -101,5 +113,6 @@
         private TextBox textBoxVariableA;
         private TextBox txtBoxVariableB;
         private Button btnCalcular;
+        private Button btnReset;
     }
 }

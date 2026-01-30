@@ -33,15 +33,28 @@ namespace Calculadora
 
                 MessageBox.Show("El Resultado es: " + resultado.ToString(), "Sistema"
                     , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Reset();
             }
             catch (Exception)
             {
-                MessageBox.Show("Error en la conversion de datos","Sistema",
-                    MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Error en la conversion de datos", "Sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
 
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void Reset()
+        {
+            textBoxVariableA.Text = "";
+            txtBoxVariableB.Clear();
+            textBoxVariableA.Focus();
         }
     }
 }
